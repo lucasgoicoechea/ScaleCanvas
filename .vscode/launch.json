@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "type": "java",
+      "name": "Launch ScaleCanvas Backend",
+      "request": "launch",
+      "mainClass": "com.scalecanvas.ScaleCanvasApplication",
+      "projectName": "scalecanvas-backend",
+      "cwd": "${workspaceFolder}/backend"
+    },
+    {
+      "type": "java",
+      "name": "Launch ScaleCanvas Tests",
+      "request": "launch",
+      "mainClass": "org.springframework.boot.test.context.SpringBootTest",
+      "args": ["--tests", "com.scalecanvas.*"],
+      "projectName": "scalecanvas-backend",
+      "cwd": "${workspaceFolder}/backend"
+    },
+    {
+      "type": "pwa-chrome",
+      "name": "Launch ScaleCanvas Frontend",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/frontend",
+      "preLaunchTask": "frontend: dev"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run ScaleCanvas Full Stack",
+      "configurations": [
+        "Launch ScaleCanvas Backend",
+        "Launch ScaleCanvas Frontend"
+      ]
+    }
+  ]
+}

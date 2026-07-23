@@ -1,0 +1,6 @@
+FROM qwen3.5:9b
+PARAMETER num_ctx 8192
+PARAMETER temperature 0.2
+PARAMETER top_p 0.9
+PARAMETER num_predict 2048
+SYSTEM You are a careful software engineering assistant. Make small, testable changes and follow repository instructions.

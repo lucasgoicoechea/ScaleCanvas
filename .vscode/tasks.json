@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Spring Boot: Run",
+      "type": "java",
+      "request": "launch",
+      "mainClass": "com.scalecanvas.ScaleCanvasApplication",
+      "projectName": "scalecanvas-backend"
+    },
+    {
+      "label": "Maven: backend tests",
+      "type": "shell",
+      "command": "mvn",
+      "args": ["-f", "backend/pom.xml", "test"],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Maven: backend build",
+      "type": "shell",
+      "command": "mvn",
+      "args": ["-f", "backend/pom.xml", "package", "-DskipTests"],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "frontend: dev",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "$node = Get-Command node -ErrorAction SilentlyContinue; if ($node) { & $node.Source --version; Set-Location '${workspaceFolder}/frontend'; & $node.Source .\\node_modules\\vite\\bin\\vite.js --host 0.0.0.0 --port 5173 } else { Write-Host 'Node.js no está instalado o no está en PATH. Instálalo y vuelve a intentar.'; exit 1 }"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "owner": "vite",
+          "pattern": {
+            "regexp": ".*",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".*",
+            "endsPattern": ".*Local.*http://.*"
+          }
+        }
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

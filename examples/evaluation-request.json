@@ -1,0 +1,53 @@
+{
+  "scenario": {
+    "name": "Global Portfolio SaaS",
+    "description": "Synthetic scenario used by the portfolio demo",
+    "productType": "SAAS_B2B",
+    "workload": {
+      "registeredUsers": 100000,
+      "dailyActiveUsers": 20000,
+      "concurrentUsers": 1000,
+      "averageRps": 120,
+      "peakRps": 800,
+      "burstFactor": 6.67,
+      "readPercentage": 85,
+      "writePercentage": 15,
+      "averagePayloadBytes": 4096,
+      "maximumPayloadBytes": 2000000,
+      "batchJobsPerDay": 4,
+      "asynchronousWorkPercentage": 20
+    },
+    "data": {
+      "currentStorageGb": 120,
+      "monthlyGrowthPercentage": 8,
+      "retentionMonths": 36,
+      "objectStorageGb": 60,
+      "hotDataPercentage": 30,
+      "eventVolumePerDay": 500000
+    },
+    "quality": {
+      "targetP50Ms": 80,
+      "targetP95Ms": 250,
+      "targetP99Ms": 700,
+      "availabilitySloPercent": 99.9,
+      "rtoMinutes": 60,
+      "rpoMinutes": 15,
+      "consistencyLevel": "READ_YOUR_WRITES",
+      "geographicScope": "MULTI_COUNTRY"
+    },
+    "organization": {
+      "teamSize": 8,
+      "operationsMaturity": "MEDIUM",
+      "deploymentFrequencyPerWeek": 5,
+      "onCallAvailable": true,
+      "observabilityMaturity": "MEDIUM",
+      "cloudExperience": "MEDIUM",
+      "budgetBand": "MODERATE"
+    }
+  },
+  "variants": [
+    "BASELINE",
+    "GROWTH_X2",
+    "GROWTH_X10"
+  ]
+}

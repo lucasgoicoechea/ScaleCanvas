@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "vscjava.vscode-java-pack",
+    "vmware.vscode-spring-boot",
+    "redhat.java",
+    "vscjava.vscode-maven",
+    "christian-kohler.path-intellisense"
+  ]
+}

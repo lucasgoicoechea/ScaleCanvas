@@ -1,0 +1,19 @@
+package com.scalecanvas.rules;
+
+public enum ComponentType {
+    MODULAR_MONOLITH,
+    HORIZONTAL_REPLICAS,
+    MESSAGE_QUEUE,
+    DISTRIBUTED_CACHE,
+    READ_REPLICA,
+    OBJECT_STORAGE,
+    CDN,
+    MULTI_AZ,
+    SERVERLESS,
+    KUBERNETES,
+    KAFKA,
+    SHARDING,
+    CONTAINER,
+    API_GATEWAY,
+    LOAD_BALANCER
+}

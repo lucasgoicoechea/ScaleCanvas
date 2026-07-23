@@ -1,0 +1,6 @@
+flowchart TB
+ Browser[React + TypeScript] --> API[Spring Boot API]
+ API --> Domain[Capacity + Rule Engine]
+ API --> DB[(PostgreSQL)]
+ API --> Adapter[Optional AI Adapter]
+ Adapter -. optional .-> Ollama[Ollama]
