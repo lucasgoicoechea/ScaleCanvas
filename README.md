@@ -185,6 +185,7 @@ Docker se mantiene como alternativa de despliegue; no es necesario para la demo.
 
 ```powershell
 Copy-Item .env.example .env
+# Editar .env y definir POSTGRES_PASSWORD antes de continuar.
 docker compose up --build
 ```
 
