@@ -6,6 +6,8 @@
 ![React](https://img.shields.io/badge/React-TypeScript-61DAFB?logo=react&logoColor=black)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue)
 
+> **Architecture evolution, explained. Scale with evidence, not hype.**
+
 ScaleCanvas es un laboratorio de arquitectura de software que transforma un escenario
 cuantitativo en decisiones justificadas y reproducibles.
 
@@ -17,6 +19,10 @@ justificada.
 
 La IA es opcional y sólo explica resultados existentes. No modifica cálculos ni decide la
 arquitectura.
+
+<p align="center">
+  <img src="docs/assets/scalecanvas-hero.png" alt="ScaleCanvas mostrando el escenario de ejemplo" width="100%">
+</p>
 
 ## Por qué este proyecto
 
@@ -48,6 +54,16 @@ presentarse como recetas sin métricas. ScaleCanvas obliga a vincular cada recom
 - una clasificación `Do now`, `Watch` o `Not yet`.
 
 Está orientado a backend engineers, arquitectos, tech leads, SREs y estudiantes avanzados.
+
+## Demo visual
+
+| Recomendaciones explicables | Arquitectura y riesgos |
+|---|---|
+| ![ScaleCanvas mostrando recomendaciones y evidencia](docs/assets/scalecanvas-recommendations.png) | ![ScaleCanvas mostrando el canvas de arquitectura y el mapa de riesgos](docs/assets/scalecanvas-architecture.png) |
+
+Cada recomendación expone la regla aplicada, el umbral, la evidencia, los beneficios,
+los trade-offs y una alternativa más simple. El canvas traduce esas decisiones a una
+topología navegable y mantiene visibles los riesgos operativos.
 
 ## Funcionalidades
 
